@@ -2,7 +2,9 @@ import os
 import time
 import threading
 
-
+# reset the final output.txt file
+with open("output.txt", "w") as file:
+    file.write("")  # this clears the file
 
 ## ok so what I can do right now is to make a class
 ## this will get us the the current path of the file.

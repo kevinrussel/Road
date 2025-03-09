@@ -22,8 +22,8 @@ class Requesting_Files_Names:
 
 
     def fun1(self):
-        print("Hello there!")
-        time.sleep(0.0025)
+        print("Goodbye!")
+        
 
 
     def run(self):

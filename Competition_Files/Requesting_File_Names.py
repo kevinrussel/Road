@@ -1,7 +1,8 @@
 import os
 import time
 import threading
-
+import sys
+from test_model import Test
 # reset the final output.txt file
 with open("output.txt", "w") as file:
     file.write("")  # this clears the file
@@ -23,16 +24,16 @@ class Requesting_Files_Names:
 
 
 
-    def fun1(self):
-        print("Hello there!")
-        time.sleep(0.0025)
+    def fun1(self, f):
+        # fileLine = CarsInTheSky()
+        print(f)
 
 
     def run(self):
         while self.checkThreading == False:
             for name in os.listdir(self.filename):
                 with open(os.path.join(self.filename,name)) as f:
-                    threading.Thread(target=self.fun1).start()
+                    threading.Thread(target=self.fun1(f)).start()
             self.checkThreading = True
 
 
